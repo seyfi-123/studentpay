@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "StudentPay",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "cool-palmier-ef3a2d.netlify",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
