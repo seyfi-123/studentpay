@@ -9,31 +9,51 @@
   "background_color": "#eef0f4",
   "theme_color": "#1e293b",
   "lang": "tg",
+  "dir": "ltr",
   "categories": ["finance", "business"],
   "icons": [
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjY2JkNWUxIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM5NGEzYjgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NDc0OGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMTMwIiBmaWxsPSIjMGYxNzJhIi8+PHRleHQgeD0iMjU2IiB5PSIzMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2MCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9Ii04Ij5TUDwvdGV4dD48cmVjdCB4PSIxODAiIHk9IjM1NSIgd2lkdGg9IjE1MiIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0iIzEwYjk4MSIvPjwvc3ZnPg==",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjY2JkNWUxIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM5NGEzYjgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NDc0OGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMTMwIiBmaWxsPSIjMGYxNzJhIi8+PHRleHQgeD0iMjU2IiB5PSIzMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2MCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9Ii04Ij5TUDwvdGV4dD48cmVjdCB4PSIxODAiIHk9IjM1NSIgd2lkdGg9IjE1MiIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0iIzEwYjk4MSIvPjwvc3ZnPg==",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./screenshot-mobile.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Саҳифаи асосии StudentPay"
     }
   ],
   "shortcuts": [
     {
       "name": "Қарзи фаврӣ",
       "short_name": "DailyPay",
-      "url": "./?product=DAILY"
+      "description": "Қарзи фаврӣ дар 7 рӯз",
+      "url": "./?product=DAILY",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Маблағгузории таҳсил",
       "short_name": "StudentPay",
-      "url": "./?product=STUDENT"
+      "description": "Қарз барои донишҷӯён",
+      "url": "./?product=STUDENT",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
     }
   ]
 }
