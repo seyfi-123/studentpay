@@ -1,4 +1,4 @@
-const CACHE = 'studentpay-v2';
+const CACHE = 'studentpay-v3';
 const FILES = [
   './',
   './index.html',
@@ -23,17 +23,18 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
-// Стратегияи "Network First" барои авто-навсозӣ (автоматическое обновление)
+// Стратегия Network First бо истиснои пурраи API-дархостҳои бэкенд
 self.addEventListener('fetch', e => {
-  // Агар дархости API бошад, онро кэш намекунад
-  if (e.request.url.includes('/api/') || e.request.url.includes('railway')) {
+  const url = e.request.url;
+
+  // Истисно кардани ҳамаи эндпоинтҳои FastAPI (/api/v1/, /health) ва дархостҳои динамикии POST
+  if (url.includes('/api/') || url.includes('/health') || url.includes('railway') || e.request.method !== 'GET') {
     return;
   }
 
   e.respondWith(
     fetch(e.request)
       .then(response => {
-        // Агар интернет бошад, версияи нави кодро аз GitHub мегирад ва дар кэш нав мекунад
         if (response && response.status === 200 && response.type === 'basic') {
           const responseToCache = response.clone();
           caches.open(CACHE).then(cache => {
@@ -43,9 +44,7 @@ self.addEventListener('fetch', e => {
         return response;
       })
       .catch(() => {
-        // Агар интернет набошад (офлайн), версияи сабтшударо аз кэш нишон медиҳад
         return caches.match(e.request);
       })
   );
 });
-
