@@ -19,22 +19,26 @@
 
 <style>
 :root{
+  /* Сиёҳ */
   --bg:#0a0b0f;
   --bg-2:#0f1117;
   --srf:#131620;
   --srf-2:#1a1e2e;
   --srf-3:#222839;
 
+  /* Серебро — барои рақамҳо */
   --silver:#cbd5e1;
   --silver-bright:#e2e8f0;
   --silver-dim:#94a3b8;
   --silver-deep:#64748b;
 
+  /* Матн */
   --txt:#e2e8f0;
   --txt-2:#cbd5e1;
   --mut:#94a3b8;
   --lite:#64748b;
 
+  /* Рангҳо */
   --pri:#475569;
   --pri-2:#334155;
   --acc:#10b981;
@@ -44,10 +48,12 @@
   --dng:#ef4444;
   --dng-soft:rgba(239,68,68,0.12);
 
+  /* Сарҳадҳо */
   --brd:rgba(255,255,255,0.06);
   --brd-2:rgba(255,255,255,0.1);
   --brd-3:rgba(255,255,255,0.14);
 
+  /* Сояҳо */
   --sh-sm:0 1px 2px rgba(0,0,0,0.4);
   --sh:0 4px 16px rgba(0,0,0,0.5);
   --sh-lg:0 20px 48px rgba(0,0,0,0.6);
@@ -59,6 +65,7 @@
 body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;align-items:center;
   min-height:100vh;overflow:hidden}
 
+/* ===== SPLASH SCREEN ===== */
 .splash{
   position:fixed;inset:0;background:var(--bg);z-index:9999;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
@@ -105,12 +112,14 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes loading{0%{width:0}100%{width:100%}}
 
+/* ===== APP ===== */
 .phone{width:100%;max-width:414px;height:100vh;max-height:896px;background:var(--bg);
   border-radius:44px;box-shadow:0 40px 80px -20px rgba(0,0,0,0.8),0 0 0 1px rgba(255,255,255,0.04);
   overflow:hidden;display:flex;flex-direction:column;position:relative;opacity:0;
   transition:opacity .5s ease}
 .phone.show{opacity:1}
 
+/* HEADER */
 .hdr{padding:16px 20px 14px;display:flex;justify-content:space-between;align-items:center;
   background:rgba(10,11,15,0.85);backdrop-filter:blur(20px);
   border-bottom:1px solid var(--brd);z-index:5}
@@ -131,6 +140,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 .status-badge.offline{color:var(--dng);background:var(--dng-soft);border-color:rgba(239,68,68,0.2)}
 .status-badge.checking{color:var(--wrn);background:var(--wrn-soft);border-color:rgba(245,158,11,0.2)}
 
+/* CONTENT */
 .content{padding:20px;flex:1;overflow-y:auto;scrollbar-width:none}
 .content::-webkit-scrollbar{display:none}
 
@@ -138,6 +148,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
   letter-spacing:1.2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
 .section-title::after{content:'';flex:1;height:1px;background:var(--brd-2)}
 
+/* CARDS */
 .card{background:var(--srf);padding:16px;border-radius:16px;margin-bottom:10px;
   border:1px solid var(--brd);cursor:pointer;position:relative;overflow:hidden;
   transition:transform .15s,box-shadow .2s,border-color .2s;box-shadow:var(--sh-sm)}
@@ -162,8 +173,10 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
   background:rgba(203,213,225,0.08);color:var(--silver);border:1px solid var(--brd-2);
   letter-spacing:0.3px}
 .card-tag.green{background:var(--acc-soft);color:#6ee7b7;border-color:rgba(16,185,129,0.2)}
+/* НОРАНҶӢ — на сурх! */
 .card-tag.orange{background:var(--wrn-soft);color:#fbbf24;border-color:rgba(245,158,11,0.25)}
 
+/* BUTTONS */
 .btn{background:linear-gradient(135deg,#334155,#1e293b);color:var(--silver-bright);
   border:1px solid var(--brd-2);padding:12px 16px;border-radius:10px;
   font-size:13px;font-weight:500;cursor:pointer;width:100%;
@@ -177,6 +190,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 .btn.g{background:linear-gradient(135deg,#059669,#047857);color:#fff;
   box-shadow:0 2px 10px rgba(5,150,105,0.3),inset 0 1px 0 rgba(255,255,255,0.1)}
 
+/* SCREENS */
 .scr{display:none;position:absolute;inset:0;background:var(--bg);flex-direction:column;
   padding:20px;z-index:10;overflow-y:auto;scrollbar-width:none}
 .scr::-webkit-scrollbar{display:none}
@@ -195,6 +209,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 .sdot.on{background:var(--silver)}
 .sdot.dn{background:var(--acc)}
 
+/* INPUTS */
 .ig{margin-bottom:12px}
 .ig label{font-size:10px;color:var(--silver-dim);display:block;margin-bottom:5px;
   font-weight:500;letter-spacing:0.6px;text-transform:uppercase}
@@ -220,6 +235,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
   padding:10px 12px;border-radius:10px;font-size:11px;font-weight:500;
   margin-bottom:12px;display:flex;gap:8px;align-items:flex-start;line-height:1.4}
 
+/* LOADER */
 .ldr{text-align:center;padding:60px 0;margin:auto}
 .pulse{position:relative;width:90px;height:90px;margin:0 auto 24px}
 .pulse::before,.pulse::after{content:'';position:absolute;inset:0;border-radius:50%;
@@ -237,6 +253,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
   letter-spacing:-2px;font-variant-numeric:tabular-nums;line-height:1;
   text-shadow:0 0 30px rgba(203,213,225,0.3)}
 
+/* RESULT */
 #sR{justify-content:center;text-align:center;padding:40px 24px}
 .rico{width:88px;height:88px;border-radius:28px;margin:0 auto 20px;display:flex;
   align-items:center;justify-content:center;font-size:40px;animation:pin .4s;border:1px solid var(--brd-2)}
@@ -259,6 +276,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 .rdetail .row span:first-child{color:var(--mut)}
 .rdetail .row span:last-child{color:var(--silver-bright);font-weight:600}
 
+/* TOAST */
 .tst{position:absolute;top:16px;left:16px;right:16px;padding:12px 16px;border-radius:12px;
   font-size:12px;font-weight:500;z-index:200;transform:translateY(-150%);
   transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:10px;
@@ -271,7 +289,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 </head>
 <body>
 
-<!-- SPLASH SCREEN -->
+<!-- ===== SPLASH SCREEN ===== -->
 <div class="splash" id="splash">
   <div class="splash-logo">SP</div>
   <div class="splash-title">StudentPay</div>
@@ -279,7 +297,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
   <div class="splash-loader"><div class="splash-loader-bar"></div></div>
 </div>
 
-<!-- APP -->
+<!-- ===== APP ===== -->
 <div class="phone" id="app">
 
   <div class="tst" id="tst"><span id="ti">ℹ</span><span id="tm">Хабар</span></div>
@@ -303,7 +321,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
     <div class="card" onclick="openApp('RENT',500,5000,'15 рӯз')">
       <div class="card-top"><div class="card-icon green">🏠</div><span class="card-tag green">15 рӯз</span></div>
       <h3>Пардохти иҷора</h3>
-      <p class="desc">Маблағгузории иҷорапулӣ. Интиқол ба картаи соҳиби хона.</p>
+      <p class="desc">Маблағгузории иҷорапулӣ. Интиқол ба ҳисоби соҳиби хона.</p>
       <div class="card-meta"><span>💰 <b>500 – 5,000</b> TJS</span><span>📊 <b>8%</b></span></div>
       <button class="btn silver">Ариза додан →</button>
     </div>
@@ -311,7 +329,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
     <div class="card" onclick="openApp('DAILY',200,2000,'7 рӯз')">
       <div class="card-top"><div class="card-icon orange">⚡</div><span class="card-tag orange">7 рӯз</span></div>
       <h3>Қарзи фаврӣ</h3>
-      <p class="desc">Маблағҳои хурд барои ҳамарӯза. Интиқол ба корт.</p>
+      <p class="desc">Маблағҳои хурд барои ҳамарӯза. Интиқол ба ҳисоби шумо.</p>
       <div class="card-meta"><span>💰 <b>200 – 2,000</b> TJS</span><span>📊 <b>4%</b></span></div>
       <button class="btn">Ариза додан →</button>
     </div>
@@ -322,19 +340,20 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
     <div class="sh"><div class="back" onclick="goHome()">←</div><div class="stitle" id="t1">Ариза</div></div>
     <div class="steps"><div class="sdot on"></div><div class="sdot"></div><div class="sdot"></div></div>
     <div class="ig"><label>Ном ва насаб</label>
-      <input type="text" id="fName" value="Алиқулов Сайфиддин"></div>
-    <div class="ig"><label>Силсилаи шиноснома</label>
-      <input type="text" id="pSeries" maxlength="2" value="A0"></div>
+      <input type="text" id="fName" autocomplete="name" placeholder="Ном ва насаб"></div>
+    <div class="ig"><label>Силсилаи шиноснома (1-2 ҳарфи лотинӣ)</label>
+      <input type="text" id="pSeries" maxlength="2" autocapitalize="characters" placeholder="A0"
+             oninput="this.value=this.value.toUpperCase().replace(/[^A-Z]/g,'')"></div>
     <div class="ig"><label>Рақами шиноснома (7-9 рақам)</label>
-      <input type="text" id="pNumber" inputmode="numeric" maxlength="9" value="1234567"
+      <input type="text" id="pNumber" inputmode="numeric" maxlength="9" placeholder="1234567"
              oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
     <div class="ig"><label>Санаи таваллуд</label>
-      <input type="date" id="dob" value="2000-01-15"></div>
-    <div class="ig"><label>Рақами телефон (9 рақам)</label>
-      <input type="tel" id="phone" inputmode="numeric" value="921234567"
+      <input type="date" id="dob"></div>
+    <div class="ig"><label>Рақами телефон (9 рақам, бе +992)</label>
+      <input type="tel" id="phone" inputmode="numeric" placeholder="921234567"
              oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,9)"></div>
     <div class="ig"><label id="limLbl">Маблағ</label>
-      <input type="number" id="amt" oninput="calc()"></div>
+      <input type="number" id="amt" step="0.01" inputmode="decimal" oninput="calc()"></div>
     <div class="calc">
       <div class="row"><span>Мӯҳлат</span><span id="rT">—</span></div>
       <div class="row"><span>Комиссия</span><span id="rF">—</span></div>
@@ -351,55 +370,51 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 
     <div id="stF" style="display:none">
       <div class="ig"><label>Номи Университет</label>
-        <input type="text" id="uniN" value="Донишгоҳи Миллии Тоҷикистон"></div>
-      <div class="ig"><label>Рақами ҳисоб (Счёт)</label>
-        <input type="text" id="uniA" inputmode="numeric" value="20202840300001234567"
-               oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
-      <div id="gC" style="display:none">
-        <div class="alert"><span>⚠</span><span>Маблағи зиёда аз 1,000 с. — кафил ҳатмист</span></div>
-        <div class="ig"><label>Ном ва насаби кафил</label>
-          <input type="text" id="gName" value="Каримов Баҳриддин"></div>
-        <div class="ig"><label>Телефони кафил (9 рақам)</label>
-          <input type="tel" id="gPhone" inputmode="numeric" maxlength="9" value="937654321"
-                 oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
-        <div class="ig"><label>Қаринлик</label>
-          <select id="gRel">
-            <option value="FATHER">Падар</option><option value="MOTHER">Модар</option>
-            <option value="UNCLE" selected>Амак</option><option value="PATERNAL_AUNT">Амма</option>
-            <option value="MATERNAL_AUNT">Хола</option><option value="BROTHER">Ака / Додар</option>
-            <option value="SISTER">Хоҳар</option><option value="SPOUSE">Ҳамсар</option>
-          </select></div>
-      </div>
+        <input type="text" id="uniN" placeholder="Номи донишгоҳ"></div>
+      <div class="ig"><label>IBAN-и донишгоҳ</label>
+        <input type="text" id="uniA" autocapitalize="characters" placeholder="TJ00XXXX..."
+               oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')"></div>
     </div>
 
     <div id="lf" style="display:none">
       <div class="ig"><label>Ном ва насаби соҳиби хона</label>
-        <input type="text" id="lN" value="Раҳимов Зафар"></div>
-      <div class="ig"><label>Рақами карта (16 рақам)</label>
-        <input type="text" id="lC" inputmode="numeric" maxlength="16" value="9412340056781234"
-               oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
-      <div class="ig"><label>Рақами телефон (9 рақам)</label>
-        <input type="tel" id="lP" inputmode="numeric" maxlength="9" value="918887766"
-               oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
+        <input type="text" id="lN" placeholder="Ном ва насаб"></div>
+      <div class="ig"><label>IBAN-и соҳиби хона</label>
+        <input type="text" id="lC" autocapitalize="characters" placeholder="TJ00XXXX..."
+               oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')"></div>
+    </div>
+
+    <div id="df" style="display:none">
+      <div class="ig"><label>IBAN-и ҳисоби шумо (барои интиқол)</label>
+        <input type="text" id="dI" autocapitalize="characters" placeholder="TJ00XXXX..."
+               oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')"></div>
+    </div>
+
+    <div id="gC" style="display:none">
+      <div class="alert"><span>⚠</span><span id="gAlert">Кафил ҳатмист</span></div>
+      <div class="ig"><label>Телефони кафил (9 рақам, бе +992)</label>
+        <input type="tel" id="gPhone" inputmode="numeric" maxlength="9" placeholder="937654321"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,9)"></div>
+      <div class="ig"><label>Қаринлик</label>
+        <select id="gRel">
+          <option value="FATHER">Падар</option>
+          <option value="MOTHER">Модар</option>
+          <option value="UNCLE_PATERNAL">Амак</option>
+          <option value="AUNT_MATERNAL">Хола</option>
+          <option value="BROTHER">Ака / Додар</option>
+          <option value="SISTER">Хоҳар</option>
+          <option value="SPOUSE">Ҳамсар</option>
+          <option value="OTHER">Дигар</option>
+        </select></div>
+    </div>
+
+    <div id="faceBox" style="display:none">
+      <div class="ig"><label>Сурати чеҳра (Face-ID)</label>
+        <input type="file" id="faceFile" accept="image/*" capture="user" onchange="onFace(event)"></div>
+      <p id="faceSt" style="font-size:11px;color:var(--mut);margin:-6px 0 14px">Акс гирифта нашудааст</p>
     </div>
 
     <button class="btn g" id="sbBtn" onclick="submit()">📩 Аризаро фиристодан</button>
-  </div>
-
-  <!-- STEP OTP (FastAPI 15-sec OTP) -->
-  <div class="scr" id="sOTP">
-    <div class="sh"><div class="stitle">Тасдиқи OTP</div></div>
-    <div class="steps"><div class="sdot dn"></div><div class="sdot dn"></div><div class="sdot on"></div></div>
-    <div class="ldr" style="padding:20px 0;">
-      <div class="pulse" style="width:70px;height:70px;"><div class="pulse-inner" style="inset:15px;font-size:18px;">📱</div></div>
-      <h3>Коди SMS-ро ворид кунед</h3>
-      <p style="margin-bottom:15px;">Код ба рақами шумо фиристода шуд</p>
-      <div class="ig" style="max-width:200px;margin:0 auto 15px;">
-        <input type="text" id="otpCode" maxlength="6" placeholder="1234" style="text-align:center;font-size:20px;letter-spacing:4px;" inputmode="numeric">
-      </div>
-      <button class="btn g" onclick="verifyOTP()" style="margin-bottom:15px;">Тасдиқ намудан</button>
-      <div class="timer" id="otpTimer" style="font-size:32px;">15</div>
-    </div>
   </div>
 
   <!-- WAITING -->
@@ -408,7 +423,7 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
       <div class="pulse"><div class="pulse-inner">⏳</div></div>
       <h3 id="wTitle">Ариза баррасӣ мешавад...</h3>
       <p id="wSub">Лутфан интизор шавед</p>
-      <div class="timer" id="wTimer">15</div>
+      <div class="timer" id="wTimer">5</div>
     </div>
   </div>
 
@@ -425,421 +440,487 @@ body{background:var(--bg);color:var(--txt);display:flex;justify-content:center;a
 
 <script>
 // ============================================================
-// ⚙️ ТАНЗИМАТ ВА СИНХРОНИЗАТСИЯ БО БЭКЭНД (FastAPI Engine)
+// ⚙️ ТАНЗИМ
 // ============================================================
-const MODE = 'REAL'; // 'REAL' - барои уланиш ба main_credit_engine.py
+const MODE = 'MOCK';   // 'MOCK' | 'REAL'
 
+// ВАЖНО: калиди API ва X-Signature дар браузер НАБОЯД бошанд.
+// Дар REAL режим дархостҳо ба сервери миёнарав (reverse-proxy / BFF) мераванд,
+// ки X-API-KEY ва X-Signature-ро худаш илова мекунад (SIGNING_SECRET дар сервер).
 const SERVERS = {
   MOCK: {
     url: 'https://mockjet.io/m/5b1fe03c-9ffd-43e6-848c-7fd3a1b711a9',
     apiKey: '',
-    paths: {
-      check: '/api/check',
-      send: '/api/send',
-      verify: '/api/verify',
-      contracts: '/api/contracts'
-    }
+    paths: { check:'/api/check', send:'/api/send', verify:'/api/verify', contracts:'/api/contracts' }
   },
   REAL: {
-    url: 'https://payton-production.up.railway.app', // Ё 'http://localhost:8000'
-    apiKey: '1234567890abcdef1234567890abcdef1234567890abcdef',
-    paths: {
-      apply: '/api/v1/credit/apply',
-      verifyOtp: '/api/v1/credit/verify-otp',
-      health: '/api/v1/system/health'
-    }
+    url: 'https://payton-production.up.railway.app',
+    apiKey: '',
+    paths: { apply:'/api/v1/credit/apply', health:'/api/v1/system/health' }
   }
 };
 
 const RULES = {
   timeout: 30000,
-  otpWindow: 15, // 15 сония муҳлати OTP аз рӯи main_credit_engine.py
-  guarantorThreshold: 1000,
+  waitNormal: 5,
+  waitGuarantor: 15,
+  guarantorThreshold: 1000,   // DailyPay: > 1000 TJS — кафил ҳатмист (мисли бэкенд)
+  maxFace: 900000,            // бэкенд: face_id_data <= 900 000 аломат
   splashMinTime: 2200
 };
 
+// Номҳои маҳсулот мувофиқи бэкенд (ProductTypeEnum)
+const PRODUCTS = {
+  STUDENT: { api:'StudentPay', name:'StudentPay' },
+  RENT:    { api:'RentPay',    name:'RentPay'    },
+  DAILY:   { api:'DailyPay',   name:'DailyPay'   }
+};
+
 const CFG = SERVERS[MODE];
-let state = { product:'STUDENT', min:0, max:0, term:'', fee:0, payload:null, timer:null, currentAppId:null };
+let state = { product:'STUDENT', min:0, max:0, term:'', fee:0, timer:null,
+              requestId:'', faceB64:'', busy:false };
 
+const $ = id => document.getElementById(id);
 function isMock(){ return MODE === 'MOCK'; }
+function esc(v){
+  return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function newRequestId(){
+  try{ if(crypto.randomUUID) return crypto.randomUUID(); }catch(e){}
+  return 'r' + Date.now().toString(36) + Math.random().toString(36).slice(2, 12);
+}
+// Синну сол дақиқ (мисли бэкенд)
+function ageYears(iso){
+  const d = new Date(iso + 'T00:00:00');
+  if(isNaN(d)) return -1;
+  const t = new Date();
+  let a = t.getFullYear() - d.getFullYear();
+  if(t.getMonth() < d.getMonth() || (t.getMonth() === d.getMonth() && t.getDate() < d.getDate())) a--;
+  return a;
+}
+// Кафил кай ҳатмист (мувофиқи credit_engine)
+function needsGuarantor(product, amount){
+  return product === 'STUDENT' || product === 'RENT' ||
+         (product === 'DAILY' && amount > RULES.guarantorThreshold);
+}
+const IBAN_RE = /^[A-Z]{2}\d{2}[A-Z0-9]{11,30}$/;
 
+// ============================================================
+// SPLASH SCREEN
+// ============================================================
 window.addEventListener('DOMContentLoaded', () => {
-  const startTime = Date.now();
-  const splash = document.getElementById('splash');
-  const app = document.getElementById('app');
-
+  const splash = $('splash'), app = $('app');
   checkServer();
-
-  const elapsed = Date.now() - startTime;
-  const wait = Math.max(0, RULES.splashMinTime - elapsed);
-
   setTimeout(() => {
     splash.classList.add('hide');
     app.classList.add('show');
     setTimeout(() => splash.remove(), 600);
-  }, wait);
+  }, RULES.splashMinTime);
 });
 
+// ============================================================
+// TOAST
+// ============================================================
 function toast(m, t='info'){
-  const el = document.getElementById('tst');
-  document.getElementById('ti').innerText = t==='error'?'⚠':t==='success'?'✓':'ℹ';
-  document.getElementById('tm').innerText = m;
+  const el = $('tst');
+  $('ti').innerText = t==='error'?'⚠':t==='success'?'✓':'ℹ';
+  $('tm').innerText = m;
   el.className = 'tst '+t; el.classList.add('show');
   clearTimeout(el._t); el._t = setTimeout(()=>el.classList.remove('show'), 3500);
 }
 
+// ============================================================
+// API
+// ============================================================
 function apiUrl(p){ return CFG.url + p; }
 function apiHeaders(){
   const h = {'Content-Type':'application/json'};
-  if(!isMock() && CFG.apiKey) h['X-API-Key'] = CFG.apiKey;
+  if(CFG.apiKey) h['X-API-KEY'] = CFG.apiKey;   // танҳо агар proxy-и худӣ талаб кунад
   return h;
 }
 
 async function checkServer(){
-  const sb = document.getElementById('sb');
+  const sb = $('sb');
   if(!sb) return;
   sb.className = 'status-badge checking';
   sb.innerHTML = '<span>...</span>';
-
+  const c = new AbortController();
+  const t = setTimeout(()=>c.abort(), 10000);
   try{
-    const c = new AbortController();
-    const t = setTimeout(()=>c.abort(), 10000);
-
     let url, method='GET', body=null;
-    if(isMock()){
-      url = apiUrl(CFG.paths.check);
-      method = 'POST';
-      body = '{}';
-    } else {
-      url = apiUrl(CFG.paths.health);
-    }
-
+    if(isMock()){ url = apiUrl(CFG.paths.check); method='POST'; body='{}'; }
+    else { url = apiUrl(CFG.paths.health); }
     const r = await fetch(url, {method, headers:apiHeaders(), body, signal:c.signal});
-    clearTimeout(t);
-
-    if(r.ok){
-      sb.className = 'status-badge online';
-      sb.innerHTML = '<span>Онлайн</span>';
-      return true;
-    }
-    throw new Error('HTTP '+r.status);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    sb.className = 'status-badge online';
+    sb.innerHTML = '<span>Онлайн</span>';
+    return true;
   }catch(e){
     sb.className = 'status-badge offline';
     sb.innerHTML = '<span>Офлайн</span>';
     return false;
-  }
+  }finally{ clearTimeout(t); }
+}
+
+// ============================================================
+// NAV
+// ============================================================
+function release(){
+  state.busy = false;
+  const b = $('sbBtn');
+  if(b){ b.disabled = false; b.innerText = '📩 Аризаро фиристодан'; }
 }
 
 function goHome(){
   clearInterval(state.timer);
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
-  document.getElementById('mh').innerText='StudentPay';
-  state.payload = null;
-  state.currentAppId = null;
+  $('mh').innerText = 'StudentPay';
+  state.faceB64 = '';
+  release();
 }
 
 function openApp(p, min, max, term){
-  state = {...state, product:p, min, max, term, fee:0};
-  const n = p==='STUDENT'?'StudentPay' : p==='RENT'?'RentPay' : 'DailyPay';
-  document.getElementById('mh').innerText = n;
-  document.getElementById('t1').innerText = 'Ариза · '+n;
-  document.getElementById('limLbl').innerText = `Маблағ (${min} – ${max} TJS)`;
-  document.getElementById('amt').value = min;
+  state = {...state, product:p, min, max, term, fee:0,
+           requestId:newRequestId(), faceB64:'', busy:false};
+  const n = PRODUCTS[p].name;
+  $('mh').innerText = n;
+  $('t1').innerText = 'Ариза · '+n;
+  $('limLbl').innerText = `Маблағ (${min} – ${max} TJS)`;
+  $('amt').value = min;
+  const ff = $('faceFile'); if(ff) ff.value = '';
+  $('faceSt').innerText = 'Акс гирифта нашудааст';
   calc();
-  document.getElementById('s1').classList.add('on');
+  $('s1').classList.add('on');
 }
 
 function back(){
-  document.getElementById('s2').classList.remove('on');
-  document.getElementById('s1').classList.add('on');
+  $('s2').classList.remove('on');
+  $('s1').classList.add('on');
 }
 
+// ============================================================
+// CALC
+// ============================================================
 function calc(){
-  const a = parseFloat(document.getElementById('amt').value)||0;
+  const a = parseFloat($('amt').value)||0;
   let fee=0, net=a, ft='';
   if(state.product==='STUDENT'){ fee=a*0.14; ft=`${fee.toFixed(2)} · 14%`; }
   else if(state.product==='RENT'){ fee=a*0.08; net=a-fee; ft=`${fee.toFixed(2)} · 8%`; }
   else if(state.product==='DAILY'){ fee=a*0.04; net=a-fee; ft=`${fee.toFixed(2)} · 4%`; }
   state.fee = fee;
-  document.getElementById('rT').innerText = state.term;
-  document.getElementById('rF').innerText = ft;
-  document.getElementById('rN').innerText = net.toFixed(2)+' TJS';
+  $('rT').innerText = state.term;
+  $('rF').innerText = ft;
+  $('rN').innerText = net.toFixed(2)+' TJS';
 }
 
+// ============================================================
+// FACE (танҳо REAL): акс -> JPEG <= 480px -> base64 (<= 900 000 аломат)
+// ============================================================
+function onFace(e){
+  const f = e.target.files && e.target.files[0];
+  state.faceB64 = '';
+  if(!f){ $('faceSt').innerText = 'Акс гирифта нашудааст'; return; }
+  const r = new FileReader();
+  r.onerror = () => toast('Акс хонда нашуд','error');
+  r.onload = () => {
+    const im = new Image();
+    im.onerror = () => toast('Акс хонда нашуд','error');
+    im.onload = () => {
+      const k = Math.min(1, 480/Math.max(im.width, im.height));
+      const w = Math.round(im.width*k), h = Math.round(im.height*k);
+      const c = document.createElement('canvas'); c.width=w; c.height=h;
+      c.getContext('2d').drawImage(im, 0, 0, w, h);
+      let q = 0.7, d = c.toDataURL('image/jpeg', q).split(',')[1];
+      while(d.length > RULES.maxFace && q > 0.3){ q -= 0.1; d = c.toDataURL('image/jpeg', q).split(',')[1]; }
+      if(d.length > RULES.maxFace || d.length < 10){ toast('Акс хеле калон аст','error'); return; }
+      state.faceB64 = d;
+      $('faceSt').innerText = '✓ Акс омода шуд';
+    };
+    im.src = r.result;
+  };
+  r.readAsDataURL(f);
+}
+
+// ============================================================
+// STEP 1 → 2
+// ============================================================
 function step1Next(){
-  const n=document.getElementById('fName').value.trim();
-  const s=document.getElementById('pSeries').value.trim();
-  const num=document.getElementById('pNumber').value.trim();
-  const d=document.getElementById('dob').value;
-  const p=document.getElementById('phone').value.trim();
-  const a=parseFloat(document.getElementById('amt').value);
+  const n=$('fName').value.trim();
+  const s=$('pSeries').value.trim();
+  const num=$('pNumber').value.trim();
+  const d=$('dob').value;
+  const p=$('phone').value.trim();
+  const a=parseFloat($('amt').value);
 
   if(!n){ toast('Ном ва насаб!','error'); return; }
-  if(!s){ toast('Силсилаи шиноснома!','error'); return; }
-  if(num.length<7){ toast('Рақами шиноснома 7-9 рақам!','error'); return; }
+  if(!/^[A-Z]{1,2}$/.test(s)){ toast('Силсила: 1-2 ҳарфи лотинӣ!','error'); return; }
+  if(!/^\d{7,9}$/.test(num)){ toast('Рақами шиноснома 7-9 рақам!','error'); return; }
   if(!d){ toast('Санаи таваллуд!','error'); return; }
-  if(p.length<9){ toast('Телефон 9 рақам!','error'); return; }
-  if(isNaN(a)||a<state.min||a>state.max){
-    toast(`Маблағ ${state.min}–${state.max}!`,'error'); return;
-  }
+  const age = ageYears(d);
+  if(age < 18){ toast('Синну сол бояд 18+ бошад!','error'); return; }
+  if(age > 120){ toast('Санаи таваллуд нодуруст!','error'); return; }
+  if(!/^\d{9}$/.test(p)){ toast('Телефон 9 рақам!','error'); return; }
+  if(isNaN(a)||a<state.min||a>state.max){ toast(`Маблағ ${state.min}–${state.max}!`,'error'); return; }
+  if(Math.round(a*100)/100 !== a){ toast('Маблағ то 2 рақами пас аз вергул!','error'); return; }
 
-  document.getElementById('s1').classList.remove('on');
-  const stF=document.getElementById('stF'), lf=document.getElementById('lf');
-  stF.style.display='none'; lf.style.display='none';
+  $('s1').classList.remove('on');
+  ['stF','lf','df','gC'].forEach(id => $(id).style.display='none');
+  $('faceBox').style.display = isMock() ? 'none' : 'block';
 
   if(state.product==='STUDENT'){
-    document.getElementById('t2').innerText='Университет ва Кафил';
-    document.getElementById('sD').innerText='Маблағи таҳсил ба ҳисоби донишгоҳ ворид мешавад.';
-    stF.style.display='block';
-    document.getElementById('gC').style.display = (a>RULES.guarantorThreshold)?'block':'none';
+    $('t2').innerText='Университет ва Кафил';
+    $('sD').innerText='Маблағи таҳсил ба ҳисоби донишгоҳ ворид мешавад.';
+    $('stF').style.display='block';
   } else if(state.product==='RENT'){
-    document.getElementById('t2').innerText='Соҳиби хона';
-    document.getElementById('sD').innerText='Маълумоти иҷорадеҳро ворид кунед.';
-    lf.style.display='block';
+    $('t2').innerText='Соҳиби хона ва Кафил';
+    $('sD').innerText='Маълумоти иҷорадеҳро ворид кунед.';
+    $('lf').style.display='block';
   } else {
-    document.getElementById('t2').innerText='Тасдиқи DailyPay';
-    document.getElementById('sD').innerText='Маълумоти иловагӣ лозим нест.';
+    $('t2').innerText='Тасдиқи DailyPay';
+    $('sD').innerText='Маблағ ба ҳисоби шумо интиқол меёбад.';
+    $('df').style.display='block';
   }
-  document.getElementById('s2').classList.add('on');
+  if(needsGuarantor(state.product, a)){
+    $('gAlert').innerText = state.product==='DAILY'
+      ? `Маблағи зиёда аз ${RULES.guarantorThreshold} с. — кафил ҳатмист`
+      : 'Барои ин маҳсулот кафил ҳатмист';
+    $('gC').style.display='block';
+  }
+  $('s2').classList.add('on');
 }
 
+// ============================================================
+// PAYLOAD (калидҳо айнан мувофиқи CreditApplicationRequest; extra='forbid')
+// ============================================================
 function buildPayload(){
+  const a = parseFloat($('amt').value);
   const p = {
-    passport_series: document.getElementById('pSeries').value.trim(),
-    passport_number: document.getElementById('pNumber').value.trim(),
-    date_of_birth: document.getElementById('dob').value,
-    amount: parseFloat(document.getElementById('amt').value),
-    product_type: state.product,
-    face_id_data: document.getElementById('phone').value.trim(),
-    user_phone: document.getElementById('phone').value.trim(),
-    full_name: document.getElementById('fName').value.trim()
+    passport_series: $('pSeries').value.trim().toUpperCase(),
+    passport_number: $('pNumber').value.trim(),
+    date_of_birth: $('dob').value,
+    amount: a,
+    product_type: PRODUCTS[state.product].api,
+    face_id_data: state.faceB64 || (isMock() ? 'MOCK-FACE-DATA' : ''),
+    user_phone: '+992' + $('phone').value.trim(),
+    request_id: state.requestId
   };
   if(state.product==='STUDENT'){
-    p.university_name = document.getElementById('uniN').value.trim();
-    p.university_account = document.getElementById('uniA').value.trim();
-    if(p.amount>RULES.guarantorThreshold){
-      p.guarantor_name = document.getElementById('gName').value.trim();
-      p.guarantor_phone = document.getElementById('gPhone').value.trim();
-      p.guarantor_relation = document.getElementById('gRel').value;
-    }
+    p.university_name = $('uniN').value.trim();
+    p.university_iban = $('uniA').value.trim().toUpperCase();
   } else if(state.product==='RENT'){
-    p.landlord_name = document.getElementById('lN').value.trim();
-    p.landlord_card = document.getElementById('lC').value.trim();
-    p.landlord_phone = document.getElementById('lP').value.trim();
+    p.landlord_name = $('lN').value.trim();
+    p.landlord_iban = $('lC').value.trim().toUpperCase();
+  } else {
+    p.self_iban = $('dI').value.trim().toUpperCase();
+  }
+  if(needsGuarantor(state.product, a)){
+    p.guarantor_phone = '+992' + $('gPhone').value.trim();
+    p.guarantor_relation = $('gRel').value;
   }
   return p;
 }
 
+// ============================================================
+// SUBMIT
+// ============================================================
 async function submit(){
+  if(state.busy) return;
   const p = buildPayload();
 
-  if(state.product==='STUDENT' && (!p.university_name || !p.university_account)){
-    toast('Маълумоти университет!','error'); return;
-  }
-  if(state.product==='STUDENT' && p.amount>RULES.guarantorThreshold){
-    if(!p.guarantor_name || p.guarantor_phone.length<9){
-      toast('Маълумоти кафил!','error'); return;
-    }
+  if(state.product==='STUDENT'){
+    if(!p.university_name){ toast('Номи университет!','error'); return; }
+    if(!IBAN_RE.test(p.university_iban)){ toast('IBAN-и университет нодуруст!','error'); return; }
   }
   if(state.product==='RENT'){
-    if(!p.landlord_name || p.landlord_card.length!==16 || p.landlord_phone.length!==9){
-      toast('Маълумоти соҳиби хона!','error'); return;
-    }
+    if(!p.landlord_name){ toast('Номи соҳиби хона!','error'); return; }
+    if(!IBAN_RE.test(p.landlord_iban)){ toast('IBAN-и соҳиби хона нодуруст!','error'); return; }
+  }
+  if(state.product==='DAILY' && !IBAN_RE.test(p.self_iban)){
+    toast('IBAN-и ҳисоби шумо нодуруст!','error'); return;
+  }
+  if(p.guarantor_phone !== undefined && !/^\+992\d{9}$/.test(p.guarantor_phone)){
+    toast('Телефони кафил 9 рақам!','error'); return;
+  }
+  if(p.guarantor_phone === p.user_phone){
+    toast('Кафил наметавонад худи шумо бошад!','error'); return;
+  }
+  if(!isMock() && !p.face_id_data){
+    toast('Аввал сурати чеҳраро гиред!','error'); return;
   }
 
-  const btn = document.getElementById('sbBtn');
-  btn.disabled=true; btn.innerText='⏳ Фиристода мешавад...';
-
-  if(isMock()) await doMock(p);
-  else await doReal(p);
-
-  btn.disabled=false; btn.innerText='📩 Аризаро фиристодан';
-}
-
-// REAL FASTAPI INTEGRATION
-async function doReal(p){
-  document.getElementById('s2').classList.remove('on');
-  document.getElementById('sW').classList.add('on');
-  document.getElementById('wTitle').innerText='Ариза баррасӣ мешавад...';
-  document.getElementById('wSub').innerText='FastAPI + Scoring Engine';
-
-  const c = new AbortController();
-  const t = setTimeout(()=>c.abort(), RULES.timeout);
+  state.busy = true;
+  const btn = $('sbBtn');
+  btn.disabled = true; btn.innerText = '⏳ Фиристода мешавад...';
 
   try{
-    const r = await fetch(apiUrl(CFG.paths.apply), {
-      method:'POST', headers:apiHeaders(), body:JSON.stringify(p), signal:c.signal
-    });
-    clearTimeout(t);
-    const d = await r.json();
-    document.getElementById('sW').classList.remove('on');
-
-    if(!r.ok){
-      showResult(false, 'Хато', d.detail||d.message||('HTTP '+r.status), null, null);
-      return;
-    }
-
-    state.currentAppId = d.application_id || d.contract_id || d.id;
-
-    // Агар бэкенд OTP талаб кунад (15 сония)
-    if(d.status === 'PENDING_OTP' || d.requires_otp){
-      startOTPScreen();
-      return;
-    }
-
-    if(d.status==='approved' || d.status==='APPROVED' || state.currentAppId){
-      showResult(true, 'Қабул шуд ✓',
-        d.message||'Аризаи шумо бомуваффақият қабул гардид.', state.currentAppId,
-        { 'Маблағ': p.amount+' TJS', 'Мӯҳлат': state.term, 'Аннуитет': (d.monthly_payment? d.monthly_payment+' TJS': 'Ҳисоб шуд') });
-      toast('Ариза қабул шуд!','success');
-    } else if(d.status==='rejected' || d.status==='REJECTED'){
-      showResult(false, 'Рад шуд', 'Сабаб: '+(d.reason||d.message||'—'), null, null);
-    } else {
-      showResult(true, 'Қабул шуд', d.message||'Ариза қабул гардид.', state.currentAppId, null);
-    }
+    if(isMock()) await doMock(p);
+    else await doReal(p);
   }catch(e){
-    clearTimeout(t);
-    document.getElementById('sW').classList.remove('on');
-    let msg = e.name==='AbortError' ? 'Вақти интизорӣ гузашт' : 'Хатои пайвастшавӣ: '+e.message;
-    showResult(false, 'Хатои пайвастшавӣ', msg, null, null);
+    $('sW').classList.remove('on');
+    showResult(false, 'Хато', e.message || 'Хатои номаълум', null, null);
   }
 }
 
-// 15-SEC OTP COUNTDOWN FOR FASTAPI BACKEND
-function startOTPScreen(){
-  document.getElementById('sOTP').classList.add('on');
-  let left = RULES.otpWindow;
-  const timerEl = document.getElementById('otpTimer');
-  timerEl.innerText = left;
-
-  clearInterval(state.timer);
-  state.timer = setInterval(() => {
-    left--;
-    timerEl.innerText = left > 0 ? left : 0;
-    if(left <= 0){
-      clearInterval(state.timer);
-      toast('Вақти OTP ба охир расид (15с)!', 'error');
-    }
-  }, 1000);
-}
-
-async function verifyOTP(){
-  const code = document.getElementById('otpCode').value.trim();
-  if(!code || code.length < 4){
-    toast('Коди OTP-ро дуруст ворид кунед!', 'error');
-    return;
-  }
-
-  try{
-    const r = await fetch(apiUrl(CFG.paths.verifyOtp), {
-      method:'POST',
-      headers:apiHeaders(),
-      body:JSON.stringify({
-        application_id: state.currentAppId,
-        otp_code: code
-      })
-    });
-
-    const d = await r.json();
-    document.getElementById('sOTP').classList.remove('on');
-    clearInterval(state.timer);
-
-    if(r.ok && (d.status === 'APPROVED' || d.status === 'success')){
-      showResult(true, 'Қабул шуд ✓', 'Код тасдиқ шуд ва шартнома сохта шуд.', state.currentAppId, {
-        'Маблағ': document.getElementById('amt').value+' TJS',
-        'Ҳолат': 'Тасдиқ шуд'
-      });
-      toast('Тасдиқ шуд!', 'success');
-    } else {
-      showResult(false, 'Хатои OTP', d.detail || d.message || 'Коди OTP нодӯруст аст ё вақташ гузашт.', null, null);
-    }
-  }catch(e){
-    document.getElementById('sOTP').classList.remove('on');
-    showResult(false, 'Хато', 'Хатои пайвастшавӣ: '+e.message, null, null);
-  }
-}
-
-// MOCK HANDLER
+// ============ MOCK (танҳо барои намоиш; рамзи '1234' танҳо дар mock) ============
 async function doMock(p){
-  document.getElementById('s2').classList.remove('on');
-  const needsGuarantor = (state.product==='STUDENT' && p.amount>RULES.guarantorThreshold);
-  const waitSec = needsGuarantor ? 15 : 5;
+  $('s2').classList.remove('on');
+  const needG = !!p.guarantor_phone;
+  const waitSec = needG ? RULES.waitGuarantor : RULES.waitNormal;
 
-  document.getElementById('sW').classList.add('on');
-  document.getElementById('wTitle').innerText = needsGuarantor
-    ? 'Интизори тасдиқи кафил...'
-    : 'Ариза баррасӣ мешавад...';
-  document.getElementById('wSub').innerHTML = needsGuarantor
-    ? 'Ба кафил SMS фиристода шуд.<br>Тасдиқро интизорем.'
-    : 'Санҷиш ва сохтани шартнома';
+  $('sW').classList.add('on');
+  $('wTitle').innerText = needG ? 'Интизори тасдиқи кафил...' : 'Ариза баррасӣ мешавад...';
+  $('wSub').innerHTML = needG ? 'Ба кафил SMS фиристода шуд.<br>Тасдиқро интизорем.'
+                              : 'Санҷиш ва сохтани шартнома';
 
   let left = waitSec;
-  const tEl = document.getElementById('wTimer');
+  const tEl = $('wTimer');
   tEl.innerText = left;
   clearInterval(state.timer);
 
   try{
-    await fetch(apiUrl(CFG.paths.check), {
-      method:'POST', headers:apiHeaders(), body:JSON.stringify(p)
-    });
-
-    state.timer = setInterval(async () => {
-      left--;
-      tEl.innerText = left > 0 ? left : 0;
-
-      if(left <= 0){
-        clearInterval(state.timer);
-        document.getElementById('sW').classList.remove('on');
-        const refId = 'SP-'+Date.now();
-        showResult(true, 'Қабул шуд ✓',
-          'Аризаи шумо бомуваффақият қабул гардид.',
-          refId, {
-            'Маблағ': p.amount+' TJS',
-            'Мӯҳлат': state.term,
-            'Маҳсулот': state.product,
-            'Комиссия': state.fee.toFixed(2)+' TJS'
-          });
-        toast('Ариза қабул шуд!','success');
-      }
-    }, 1000);
-
+    await fetch(apiUrl(CFG.paths.check), {method:'POST', headers:apiHeaders(), body:JSON.stringify(p)});
+    await fetch(apiUrl(CFG.paths.send), {method:'POST', headers:apiHeaders(),
+      body:JSON.stringify({phone:p.user_phone})});
+    if(needG){
+      await fetch(apiUrl(CFG.paths.send), {method:'POST', headers:apiHeaders(),
+        body:JSON.stringify({phone:p.guarantor_phone, type:'guarantor'})});
+    }
   }catch(e){
-    clearInterval(state.timer);
-    document.getElementById('sW').classList.remove('on');
+    $('sW').classList.remove('on');
     showResult(false, 'Хато', e.message, null, null);
+    return;
+  }
+
+  state.timer = setInterval(async () => {
+    left--;
+    tEl.innerText = left > 0 ? left : 0;
+    if(left > 0) return;
+    clearInterval(state.timer);
+    try{
+      if(needG){
+        const rv = await fetch(apiUrl(CFG.paths.verify), {method:'POST', headers:apiHeaders(),
+          body:JSON.stringify({phone:p.guarantor_phone, code:'1234', type:'guarantor'})});
+        if(!rv.ok){
+          $('sW').classList.remove('on');
+          showResult(false, 'Кафил тасдиқ накард', 'Кафил тасдиқро рад кард.', null, null);
+          return;
+        }
+      }
+      const rc = await fetch(apiUrl(CFG.paths.contracts), {method:'POST', headers:apiHeaders(),
+        body:JSON.stringify({...p, otp_code:'1234'})});
+      const dc = await rc.json();
+      $('sW').classList.remove('on');
+      const refId = dc.contract_id || dc.application_id || dc.id || ('SP-'+Date.now());
+      showResult(true, 'Қабул шуд ✓', 'Аризаи шумо бомуваффақият қабул гардид.', refId, {
+        'Маблағ': p.amount+' TJS', 'Мӯҳлат': state.term,
+        'Маҳсулот': p.product_type, 'Комиссия': state.fee.toFixed(2)+' TJS'
+      });
+      toast('Ариза қабул шуд!','success');
+    }catch(e){
+      $('sW').classList.remove('on');
+      showResult(false, 'Хато', e.message, null, null);
+    }
+  }, 1000);
+}
+
+// ============ REAL ============
+function errText(r, d){
+  // FastAPI: {"detail": {"reason":...}} ё {"detail":[{loc,msg}]} ё {"detail":"..."}
+  const det = d && d.detail;
+  if(Array.isArray(det)){
+    return det.map(x => (x.loc ? x.loc[x.loc.length-1] + ': ' : '') + (x.msg||'')).join('; ');
+  }
+  if(det && typeof det === 'object') return det.reason || det.message || ('HTTP '+r.status);
+  if(typeof det === 'string') return det;
+  return (d && (d.reason || d.message)) || ('HTTP '+r.status);
+}
+
+async function doReal(p){
+  $('s2').classList.remove('on');
+  $('sW').classList.add('on');
+  $('wTitle').innerText = 'Ариза фиристода мешавад...';
+  $('wSub').innerText = 'Сервери бонк';
+  $('wTimer').innerText = '';
+
+  const c = new AbortController();
+  const t = setTimeout(()=>c.abort(), RULES.timeout);
+  try{
+    const r = await fetch(apiUrl(CFG.paths.apply), {
+      method:'POST', headers:apiHeaders(), body:JSON.stringify(p), signal:c.signal});
+    clearTimeout(t);
+    const raw = await r.text();
+    $('sW').classList.remove('on');
+
+    let d = {};
+    try{ d = JSON.parse(raw); }catch(e){ d = {}; }
+
+    if(!r.ok){
+      // 409 (E0002) = ҳамин request_id аллакай коркард шудааст — такрор нашавад
+      showResult(false, 'Рад шуд', errText(r, d), null, null);
+      return;
+    }
+
+    const st = d.status;
+    const base = {'Маблағ': p.amount+' TJS', 'Мӯҳлат': state.term};
+    if(d.commission !== undefined) base['Комиссия'] = d.commission+' TJS';
+    if(d.net !== undefined) base['Ба ҳисоб'] = d.net+' TJS';
+    if(d.gross_loan !== undefined) base['Ҷамъи қарз'] = d.gross_loan+' TJS';
+
+    if(st === 'PENDING_GUARANTOR_APPROVAL'){
+      showResult(true, 'Интизори кафил',
+        'Ба кафил SMS фиристода шуд. Ариза пас аз тасдиқи кафил (то 24 соат) фаъол мешавад.',
+        'ARIZA #'+d.application_id, base);
+    } else if(st === 'APPROVED'){
+      showResult(true, 'Қабул шуд ✓', 'Аризаи шумо тасдиқ шуд.',
+        'ARIZA #'+d.application_id, base);
+      toast('Ариза қабул шуд!','success');
+    } else {
+      showResult(false, 'Рад шуд', d.reason || d.message || 'Ариза қабул нашуд.', null, null);
+    }
+  }catch(e){
+    clearTimeout(t);
+    $('sW').classList.remove('on');
+    const msg = e.name==='AbortError' ? 'Вақти интизорӣ гузашт' : 'Хато: '+e.message;
+    showResult(false, 'Хатои пайвастшавӣ', msg, null, null);
   }
 }
 
+// ============================================================
+// RESULT
+// ============================================================
 function showResult(ok, title, desc, ref, details){
-  document.getElementById('rI').className = 'rico ' + (ok?'ok':'err');
-  document.getElementById('rI').innerText = ok?'✓':'✕';
-  const t = document.getElementById('rTitle');
+  release();
+  $('rI').className = 'rico ' + (ok?'ok':'err');
+  $('rI').innerText = ok?'✓':'✕';
+  const t = $('rTitle');
   t.innerText = title;
   t.style.color = ok ? 'var(--silver-bright)' : '#fca5a5';
-  document.getElementById('rDesc').innerText = desc;
+  $('rDesc').innerText = (typeof desc === 'string') ? desc : 'Хато';
 
-  const detEl = document.getElementById('rDetails');
+  const detEl = $('rDetails');
   if(details && Object.keys(details).length){
     detEl.innerHTML = Object.entries(details).map(([k,v]) =>
-      `<div class="row"><span>${k}</span><span>${v}</span></div>`
-    ).join('');
+      `<div class="row"><span>${esc(k)}</span><span>${esc(v)}</span></div>`).join('');
     detEl.style.display='block';
   } else detEl.style.display='none';
 
-  const r = document.getElementById('rRef');
-  if(ref){ r.innerText = 'ID: '+ref; r.style.display='inline-block'; }
+  const r = $('rRef');
+  if(ref){ r.innerText = String(ref).startsWith('ARIZA') ? ref : 'ID: '+ref; r.style.display='inline-block'; }
   else r.style.display='none';
 
-  document.getElementById('sR').classList.add('on');
+  $('sR').classList.add('on');
 }
 
+// ============================================================
+// SERVICE WORKER
+// ============================================================
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js')
-      .then(reg => console.log('✅ SW:', reg.scope))
-      .catch(err => console.warn('⚠️ SW:', err.message));
+      .then(reg => console.log('SW:', reg.scope))
+      .catch(err => console.warn('SW:', err.message));
   });
 }
 </script>
 </body>
-</html>
+                      </html>
